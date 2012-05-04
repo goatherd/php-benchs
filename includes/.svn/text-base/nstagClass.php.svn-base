@@ -1,0 +1,72 @@
+<?php
+
+class nstagClass extends nstagParser
+{
+    
+    /**
+     * output buffer
+     *
+     */
+    private
+    $buffer = null;
+    
+    /**
+     * Output handler
+     *
+     * This method overrides nstagParser::outputHandler which
+     * print parsed buffer to the stdout.
+     *
+     * @param string parsed buffer
+     * @return void
+     */
+    protected 
+    function outputHandler($buffer) {
+        $this->buffer .= $buffer;
+    }
+    
+    /**
+     * Tag handler
+     *
+     * This method is defined as abstract in nstagParser
+     * so this method must be implemented.
+     *
+     * @param object token of type nstagToken (by ref)
+     * @return void
+     *
+     */
+    protected
+    function tagHandler(&$token) {
+        $handler = $token->tagname . 'Handler';
+        if(function_exists($handler)) {
+            $handler(&$token, &$this);
+        }
+    }
+    
+    /**
+     * Compile template file
+     *
+     * @param string filename
+     * @return string parsed template
+     */
+    public
+    function compileFile($filename) {
+        $this->buffer = '';
+        $this->parseFile($filename);
+        return $this->buffer;
+    }
+    
+    /**
+     * Compile string template
+     *
+     * @param string content
+     * @return string parsed content
+     */
+    public
+    function compileString($content) {
+        $this->buffer = '';
+        $this->parseString($content);
+        return $this->buffer;
+    }
+    
+}
+

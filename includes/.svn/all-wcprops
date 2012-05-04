@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/benchmarks/!svn/ver/25/trunk/includes
+END
+ProgressBar.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/benchmarks/!svn/ver/6/trunk/includes/ProgressBar.php
+END
+exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/benchmarks/!svn/ver/15/trunk/includes/exception.php
+END
+big_string.txt
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/benchmarks/!svn/ver/6/trunk/includes/big_string.txt
+END
+class_template.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/benchmarks/!svn/ver/25/trunk/includes/class_template.php
+END
+nstagClass.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/benchmarks/!svn/ver/7/trunk/includes/nstagClass.php
+END
+big_string.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/benchmarks/!svn/ver/3/trunk/includes/big_string.php
+END
